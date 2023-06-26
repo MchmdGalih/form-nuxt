@@ -24,11 +24,8 @@ export default {
   methods: {
     add(data) {
       console.log('this->', data)
-      if (!data.nis || !data.nama || !data.length <= 0) {
-      } else {
-        data = { ...data, id: Date.now() }
-        this.dataSiswa.push(data)
-      }
+      data = { ...data, id: Date.now() }
+      this.dataSiswa.push(data)
     },
     deleteData(id) {
       this.dataSiswa = this.dataSiswa.filter((items) => items.id !== id)
